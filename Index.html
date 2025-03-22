@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexluna - أداة تحويل سهلة وسريعة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A6FDE;
+            --secondary-color: #F5F7FA;
+            --accent-color: #28C76F;
+            --alert-color: #EA5455;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #ddd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .ad-container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .ad-container.horizontal {
+            height: 90px;
+        }
+        
+        .ad-container.rectangle {
+            height: 250px;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--light-text);
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .tab-button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .converter-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .converter-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        .converter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .input-row input {
+            flex: 2;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .input-row select {
+            flex: 3;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            background-color: white;
+        }
+        
+        .swap-button {
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .swap-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .result-container {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .info-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .info-section p {
+            margin-bottom: 15px;
+        }
+        
+        .formula {
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: monospace;
+            direction: ltr;
+            text-align: center;
+        }
+        
+        .common-conversions {
+            margin-top: 20px;
+        }
+        
+        .common-conversions h3 {
+            margin-bottom: 10px;
+        }
+        
+        .common-conversions ul {
+            list-style-type: none;
+        }
+        
+        .common-conversions li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .tab-button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .converter-container, .info-section {
+                padding: 20px;
+            }
+            
+            .input-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .swap-button {
+                margin: 10px auto;
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9822291009441043" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nexluna</h1>
+            <p>أداة مجانية لتحويل مختلف وحدات القياس بسهولة ودقة</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- AdSense - أعلى الصفحة -->
+        <div class="ad-container horizontal">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9822291009441043"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- تبويبات أنواع التحويل -->
+        <div class="tabs">
+            <button class="tab-button active" data-tab="length">الطول</button>
+            <button class="tab-button" data-tab="weight">الوزن</button>
+            <button class="tab-button" data-tab="area">المساحة</button>
+            <button class="tab-button" data-tab="temperature">درجة الحرارة</button>
+            <button class="tab-button" data-tab="volume">الحجم والسعة</button>
+        </div>
+        
+        <!-- محول الوحدات -->
+        <div class="converter-container">
+            <h2 class="converter-title">محول وحدات الطول</h2>
+            
+            <div class="converter-form">
+                <div class="input-group">
+                    <div class="input-row">
+                        <input type="number" id="fromValue" placeholder="أدخل القيمة">
+                        <select id="fromUnit">
+                            <option value="km">كيلومتر (km)</option>
+                            <option value="m">متر (m)</option>
+                            <option value="cm">سنتيمتر (cm)</option>
+                            <option value="mm">مليمتر (mm)</option>
+                            <option value="mi">ميل (mi)</option>
+                            <option value="yd">ياردة (yd)</option>
+                            <option value="ft">قدم (ft)</option>
+                            <option value="in">إنش/بوصة (in)</option>
+                        </select>
+                    </div>
+                    
+                    <button class="swap-button" id="swapButton">⇅</button>
+                    
+                    <div class="input-row">
+                        <input type="number" id="toValue" readonly>
+                        <select id="toUnit">
+                            <option value="km">كيلومتر (km)</option>
+                            <option value="m" selected>متر (m)</option>
+                            <option value="cm">سنتيمتر (cm)</option>
+                            <option value="mm">مليمتر (mm)</option>
+                            <option value="mi">ميل (mi)</option>
+                            <option value="yd">ياردة (yd)</option>
+                            <option value="ft">قدم (ft)</option>
+                            <option value="in">إنش/بوصة (in)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="result-container">
+                    <div class="result-value" id="resultText">أدخل قيمة للتحويل</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AdSense - بين المحتوى -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9822291009441043"
+                 data-ad-slot="1234567891"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- قسم المعلومات -->
+        <div class="info-section">
+            <h2>معلومات عن وحدات الطول</h2>
+            <p>وحدات الطول هي وحدات قياس تستخدم لقياس المسافة بين نقطتين. تختلف وحدات الطول المستخدمة حول العالم، لكن النظام المتري (المتر وأجزائه ومضاعفاته) هو الأكثر انتشاراً، بينما لا تزال بعض الدول تستخدم النظام الإمبراطوري (القدم، الإنش، الميل).</p>
+            
+            <div class="formula">
+                <p>1 متر = 100 سنتيمتر = 1000 مليمتر</p>
+                <p>1 كيلومتر = 1000 متر</p>
+                <p>1 ميل = 1.60934 كيلومتر</p>
+                <p>1 قدم = 0.3048 متر</p>
+                <p>1 إنش = 2.54 سنتيمتر</p>
+            </div>
+            
+            <div class="common-conversions">
+                <h3>تحويلات شائعة</h3>
+                <ul>
+                    <li>1 متر = 3.28084 قدم</li>
+                    <li>1 كيلومتر = 0.621371 ميل</li>
+                    <li>1 ياردة = 0.9144 متر</li>
+                    <li>1 قدم = 12 إنش</li>
+                    <li>1 ميل = 1760 ياردة = 5280 قدم</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- AdSense - أسفل الصفحة -->
+        <div class="ad-container horizontal">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9822291009441043"
+                 data-ad-slot="1234567892"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Nexluna - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحديد العناصر
+            const fromValue = document.getElementById('fromValue');
+            const toValue = document.getElementById('toValue');
+            const fromUnit = document.getElementById('fromUnit');
+            const toUnit = document.getElementById('toUnit');
+            const swapButton = document.getElementById('swapButton');
+            const resultText = document.getElementById('resultText');
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const converterTitle = document.querySelector('.converter-title');
+            
+            // معاملات التحويل لوحدات الطول
+            const lengthConversions = {
+                km: { km: 1, m: 1000, cm: 100000, mm: 1000000, mi: 0.621371, yd: 1093.61, ft: 3280.84, in: 39370.1 },
+                m: { km: 0.001, m: 1, cm: 100, mm: 1000, mi: 0.000621371, yd: 1.09361, ft: 3.28084, in: 39.3701 },
+                cm: { km: 0.00001, m: 0.01, cm: 1, mm: 10, mi: 0.00000621371, yd: 0.0109361, ft: 0.0328084, in: 0.393701 },
+                mm: { km: 0.000001, m: 0.001, cm: 0.1, mm: 1, mi: 0.000000621371, yd: 0.00109361, ft: 0.00328084, in: 0.0393701 },
+                mi: { km: 1.60934, m: 1609.34, cm: 160934, mm: 1609340, mi: 1, yd: 1760, ft: 5280, in: 63360 },
+                yd: { km: 0.0009144, m: 0.9144, cm: 91.44, mm: 914.4, mi: 0.000568182, yd: 1, ft: 3, in: 36 },
+                ft: { km: 0.0003048, m: 0.3048, cm: 30.48, mm: 304.8, mi: 0.000189394, yd: 0.333333, ft: 1, in: 12 },
+                in: { km: 0.0000254, m: 0.0254, cm: 2.54, mm: 25.4, mi: 0.0000157828, yd: 0.0277778, ft: 0.0833333, in: 1 }
+            };
+            
+            // معاملات التحويل لوحدات الوزن
+            const weightConversions = {
+                t: { t: 1, kg: 1000, g: 1000000, mg: 1000000000, lb: 2204.62, oz: 35274 },
+                kg: { t: 0.001, kg: 1, g: 1000, mg: 1000000, lb: 2.20462, oz: 35.274 },
+                g: { t: 0.000001, kg: 0.001, g: 1, mg: 1000, lb: 0.00220462, oz: 0.035274 },
+                mg: { t: 0.000000001, kg: 0.000001, g: 0.001, mg: 1, lb: 0.00000220462, oz: 0.000035274 },
+                lb: { t: 0.000453592, kg: 0.453592, g: 453.592, mg: 453592, lb: 1, oz: 16 },
+                oz: { t: 0.0000283495, kg: 0.0283495, g: 28.3495, mg: 28349.5, lb: 0.0625, oz: 1 }
+            };
+            
+            // معاملات التحويل لوحدات المساحة
+            const areaConversions = {
+                'km²': { 'km²': 1, 'm²': 1000000, 'cm²': 10000000000, 'mm²': 1000000000000, 'ha': 100, 'acre': 247.105, 'ft²': 10763910.4, 'in²': 1550003100 },
+                'm²': { 'km²': 0.000001, 'm²': 1, 'cm²': 10000, 'mm²': 1000000, 'ha': 0.0001, 'acre': 0.000247105, 'ft²': 10.7639, 'in²': 1550 },
+                'cm²': { 'km²': 0.0000000001, 'm²': 0.0001, 'cm²': 1, 'mm²': 100, 'ha': 0.00000001, 'acre': 0.0000000247105, 'ft²': 0.00107639, 'in²': 0.155 },
+                'mm²': { 'km²': 0.000000000001, 'm²': 0.000001, 'cm²': 0.01, 'mm²': 1, 'ha': 0.0000000001, 'acre': 0.000000000247105, 'ft²': 0.0000107639, 'in²': 0.00155 },
+                'ha': { 'km²': 0.01, 'm²': 10000, 'cm²': 100000000, 'mm²': 10000000000, 'ha': 1, 'acre': 2.47105, 'ft²': 107639, 'in²': 15500031 },
+                'acre': { 'km²': 0.00404686, 'm²': 4046.86, 'cm²': 40468600, 'mm²': 4046860000, 'ha': 0.404686, 'acre': 1, 'ft²': 43560, 'in²': 6272640 },
+                'ft²': { 'km²': 0.0000000929, 'm²': 0.092903, 'cm²': 929.03, 'mm²': 92903, 'ha': 0.00000929, 'acre': 0.0000229568, 'ft²': 1, 'in²': 144 },
+                'in²': { 'km²': 0.00000000064516, 'm²': 0.00064516, 'cm²': 6.4516, 'mm²': 645.16, 'ha': 0.000000064516, 'acre': 0.00000015942, 'ft²': 0.00694444, 'in²': 1 }
+            };
+            
+            // معاملات التحويل لوحدات درجة الحرارة
+            const temperatureConversions = {
+                '°C': { '°C': value => value, '°F': value => (value * 9/5) + 32, 'K': value => value + 273.15 },
+                '°F': { '°C': value => (value - 32) * 5/9, '°F': value => value, 'K': value => (value - 32) * 5/9 + 273.15 },
+                'K': { '°C': value => value - 273.15, '°F': value => (value - 273.15) * 9/5 + 32, 'K': value => value }
+            };
+            
+            // معاملات التحويل لوحدات الحجم والسعة
+            const volumeConversions = {
+                'm³': { 'm³': 1, 'L': 1000, 'mL': 1000000, 'gal': 264.172, 'qt': 1056.69, 'pt': 2113.38, 'cup': 4226.75, 'fl oz': 33814 },
+                'L': { 'm³': 0.001, 'L': 1, 'mL': 1000, 'gal': 0.264172, 'qt': 1.05669, 'pt': 2.11338, 'cup': 4.22675, 'fl oz': 33.814 },
+                'mL': { 'm³': 0.000001, 'L': 0.001, 'mL': 1, 'gal': 0.000264172, 'qt': 0.00105669, 'pt': 0.00211338, 'cup': 0.00422675, 'fl oz': 0.033814 },
+                'gal': { 'm³': 0.00378541, 'L': 3.78541, 'mL': 3785.41, 'gal': 1, 'qt': 4, 'pt': 8, 'cup': 16, 'fl oz': 128 },
+                'qt': { 'm³': 0.000946353, 'L': 0.946353, 'mL': 946.353, 'gal': 0.25, 'qt': 1, 'pt': 2, 'cup': 4, 'fl oz': 32 },
+                'pt': { 'm³': 0.000473176, 'L': 0.473176, 'mL': 473.176, 'gal': 0.125, 'qt': 0.5, 'pt': 1, 'cup': 2, 'fl oz': 16 },
+                'cup': { 'm³': 0.000236588, 'L': 0.236588, 'mL': 236.588, 'gal': 0.0625, 'qt': 0.25, 'pt': 0.5, 'cup': 1, 'fl oz': 8 },
+                'fl oz': { 'm³': 0.0000295735, 'L': 0.0295735, 'mL': 29.5735, 'gal': 0.0078125, 'qt': 0.03125, 'pt': 0.0625, 'cup': 0.125, 'fl oz': 1 }
+            };
+            
+            // تخزين جميع معاملات التحويل
+            const allConversions = {
+                'length': lengthConversions,
+                'weight': weightConversions,
+                'area': areaConversions,
+                'temperature': temperatureConversions,
+                'volume': volumeConversions
+            };
+            
+            // تخزين الوحدات لكل نوع تحويل
+            const unitsByType = {
+                'length': [
+                    { value: 'km', text: 'كيلومتر (km)' },
+                    { value: 'm', text: 'متر (m)' },
+                    { value: 'cm', text: 'سنتيمتر (cm)' },
+                    { value: 'mm', text: 'مليمتر (mm)' },
+                    { value: 'mi', text: 'ميل (mi)' },
+                    { value: 'yd', text: 'ياردة (yd)' },
+                    { value: 'ft', text: 'قدم (ft)' },
+                    { value: 'in', text: 'إنش/بوصة (in)' }
+                ],
+                'weight': [
+                    { value: 't', text: 'طن (t)' },
+                    { value: 'kg', text: 'كيلوغرام (kg)' },
+                    { value: 'g', text: 'غرام (g)' },
+                    { value: 'mg', text: 'مليغرام (mg)' },
+                    { value: 'lb', text: 'رطل (lb)' },
+                    { value: 'oz', text: 'أونصة (oz)' }
+                ],
+                'area': [
+                    { value: 'km²', text: 'كيلومتر مربع (km²)' },
+                    { value: 'm²', text: 'متر مربع (m²)' },
+                    { value: 'cm²', text: 'سنتيمتر مربع (cm²)' },
+                    { value: 'mm²', text: 'مليمتر مربع (mm²)' },
+                    { value: 'ha', text: 'هكتار (ha)' },
+                    { value: 'acre', text: 'فدان (acre)' },
+                    { value: 'ft²', text: 'قدم مربع (ft²)' },
+                    { value: 'in²', text: 'إنش مربع (in²)' }
+                ],
+                'temperature': [
+                    { value: '°C', text: 'سيلسيوس (°C)' },
+                    { value: '°F', text: 'فهرنهايت (°F)' },
+                    { value: 'K', text: 'كلفن (K)' }
+                ],
+                'volume': [
+                    { value: 'm³', text: 'متر مكعب (m³)' },
+                    { value: 'L', text: 'لتر (L)' },
+                    { value: 'mL', text: 'مليلتر (mL)' },
+                    { value: 'gal', text: 'جالون (gal)' },
+                    { value: 'qt', text: 'كوارت (qt)' },
+                    { value: 'pt', text: 'باينت (pt)' },
+                    { value: 'cup', text: 'كوب (cup)' },
+                    { value: 'fl oz', text: 'أونصة سائلة (fl oz)' }
+                ]
+            };
+            
+            // معلومات عن كل نوع تحويل
+            const conversionInfo = {
+                'length': {
+                    title: 'محول وحدات الطول',
+                    description: 'وحدات الطول هي وحدات قياس تستخدم لقياس المسافة بين نقطتين. تختلف وحدات الطول المستخدمة حول العالم، لكن النظام المتري (المتر وأجزائه ومضاعفاته) هو الأكثر انتشاراً، بينما لا تزال بعض الدول تستخدم النظام الإمبراطوري (القدم، الإنش، الميل).',
+                    formulas: [
+                        '1 متر = 100 سنتيمتر = 1000 مليمتر',
+                        '1 كيلومتر = 1000 متر',
+                        '1 ميل = 1.60934 كيلومتر',
+                        '1 قدم = 0.3048 متر',
+                        '1 إنش = 2.54 سنتيمتر'
+                    ],
+                    commonConversions: [
+                        '1 متر = 3.28084 قدم',
+                        '1 كيلومتر = 0.621371 ميل',
+                        '1 ياردة = 0.9144 متر',
+                        '1 قدم = 12 إنش',
+                        '1 ميل = 1760 ياردة = 5280 قدم'
+                    ]
+                },
+                'weight': {
+                    title: 'محول وحدات الوزن',
+                    description: 'وحدات الوزن هي وحدات قياس تستخدم لقياس كتلة الأجسام. النظام المتري يستخدم الكيلوغرام كوحدة أساسية، بينما يستخدم النظام الإمبراطوري الرطل والأونصة.',
+                    formulas: [
+                        '1 كيلوغرام = 1000 غرام = 1,000,000 مليغرام',
+                        '1 طن = 1000 كيلوغرام',
+                        '1 رطل = 0.453592 كيلوغرام',
+                        '1 أونصة = 28.3495 غرام'
+                    ],
+                    commonConversions: [
+                        '1 كيلوغرام = 2.20462 رطل',
+                        '1 رطل = 16 أونصة',
+                        '1 طن = 2204.62 رطل',
+                        '1 غرام = 0.035274 أونصة'
+                    ]
+                },
+                'area': {
+                    title: 'محول وحدات المساحة',
+                    description: 'وحدات المساحة هي وحدات قياس تستخدم لقياس مساحة الأسطح. تشمل وحدات المساحة الشائعة المتر المربع والكيلومتر المربع والهكتار في النظام المتري، والقدم المربع والفدان في النظام الإمبراطوري.',
+                    formulas: [
+                        '1 متر مربع = 10,000 سنتيمتر مربع',
+                        '1 كيلومتر مربع = 1,000,000 متر مربع',
+                        '1 هكتار = 10,000 متر مربع',
+                        '1 فدان = 4,046.86 متر مربع',
+                        '1 قدم مربع = 0.092903 متر مربع'
+                    ],
+                    commonConversions: [
+                        '1 كيلومتر مربع = 0.386102 ميل مربع',
+                        '1 هكتار = 2.47105 فدان',
+                        '1 متر مربع = 10.7639 قدم مربع',
+                        '1 فدان = 43,560 قدم مربع'
+                    ]
+                },
+                'temperature': {
+                    title: 'محول وحدات درجة الحرارة',
+                    description: 'وحدات درجة الحرارة هي وحدات قياس تستخدم لقياس درجة حرارة الأجسام. الوحدات الرئيسية هي سيلسيوس (°C) وفهرنهايت (°F) وكلفن (K).',
+                    formulas: [
+                        'تحويل من سيلسيوس إلى فهرنهايت: °F = (°C × 9/5) + 32',
+                        'تحويل من فهرنهايت إلى سيلسيوس: °C = (°F - 32) × 5/9',
+                        'تحويل من سيلسيوس إلى كلفن: K = °C + 273.15',
+                        'تحويل من كلفن إلى سيلسيوس: °C = K - 273.15'
+                    ],
+                    commonConversions: [
+                        'درجة تجمد الماء: 0°C = 32°F = 273.15K',
+                        'درجة غليان الماء: 100°C = 212°F = 373.15K',
+                        'درجة حرارة الغرفة: ~20-25°C = ~68-77°F = ~293-298K'
+                    ]
+                },
+                'volume': {
+                    title: 'محول وحدات الحجم والسعة',
+                    description: 'وحدات الحجم والسعة هي وحدات قياس تستخدم لقياس حجم الأجسام أو السوائل. تشمل وحدات الحجم الشائعة اللتر والمتر المكعب في النظام المتري، والجالون والكوارت والباينت في النظام الإمبراطوري.',
+                    formulas: [
+                        '1 لتر = 1000 مليلتر',
+                        '1 متر مكعب = 1000 لتر',
+                        '1 جالون (أمريكي) = 3.78541 لتر',
+                        '1 كوارت = 0.946353 لتر',
+                        '1 كوب = 236.588 مليلتر'
+                    ],
+                    commonConversions: [
+                        '1 لتر = 0.264172 جالون (أمريكي)',
+                        '1 جالون = 4 كوارت = 8 باينت = 16 كوب',
+                        '1 كوب = 8 أونصة سائلة',
+                        '1 لتر = 33.814 أونصة سائلة'
+                    ]
+                }
+            };
+            
+            // نوع التحويل الحالي
+            let currentConversionType = 'length';
+            
+            // وظيفة التحويل
+            function convert() {
+                const from = fromUnit.value;
+                const to = toUnit.value;
+                const value = parseFloat(fromValue.value);
+                
+                if (isNaN(value)) {
+                    toValue.value = '';
+                    resultText.textContent = 'أدخل قيمة صحيحة للتحويل';
+                    return;
+                }
+                
+                let result;
+                
+                // التحويل حسب نوع الوحدة
+                if (currentConversionType === 'temperature') {
+                    result = temperatureConversions[from][to](value);
+                } else {
+                    const conversions = allConversions[currentConversionType];
+                    result = value * conversions[from][to];
+                }
+                
+                toValue.value = result.toFixed(6).replace(/\.?0+$/, '');
+                resultText.textContent = `${value} ${from} = ${toValue.value} ${to}`;
+            }
+            
+            // وظيفة تبديل الوحدات
+            function swapUnits() {
+                const tempUnit = fromUnit.value;
+                fromUnit.value = toUnit.value;
+                toUnit.value = tempUnit;
+                
+                const tempValue = fromValue.value;
+                fromValue.value = toValue.value;
+                toValue.value = tempValue;
+                
+                convert();
+            }
+            
+            // وظيفة تحديث واجهة المستخدم
+            function updateUI(conversionType) {
+                currentConversionType = conversionType;
+                
+                converterTitle.textContent = conversionInfo[conversionType].title;
+                
+                // تحديث وحدات القياس في القوائم المنسدلة
+                updateUnitDropdowns(conversionType);
+                
+                // إعادة ضبط الحقول
+                fromValue.value = '';
+                toValue.value = '';
+                resultText.textContent = 'أدخل قيمة للتحويل';
+                
+                // تحديث قسم المعلومات
+                const infoSection = document.querySelector('.info-section');
+                infoSection.querySelector('h2').textContent = conversionInfo[conversionType].title;
+                infoSection.querySelector('p').textContent = conversionInfo[conversionType].description;
+                infoSection.querySelector('.formula').innerHTML = conversionInfo[conversionType].formulas.join('<br>');
+                infoSection.querySelector('.common-conversions ul').innerHTML = conversionInfo[conversionType].commonConversions.map(item => `<li>${item}</li>`).join('');
+            }
+            
+            // وظيفة تحديث القوائم المنسدلة
+            function updateUnitDropdowns(conversionType) {
+                const units = unitsByType[conversionType];
+                fromUnit.innerHTML = units.map(unit => `<option value="${unit.value}">${unit.text}</option>`).join('');
+                toUnit.innerHTML = units.map(unit => `<option value="${unit.value}">${unit.text}</option>`).join('');
+                
+                fromUnit.value = units[0].value;
+                toUnit.value = units[1].value;
+            }
+            
+            // إضافة مستمعات الأحداث
+            fromValue.addEventListener('input', convert);
+            fromUnit.addEventListener('change', convert);
+            toUnit.addEventListener('change', convert);
+            swapButton.addEventListener('click', swapUnits);
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    updateUI(button.dataset.tab);
+                });
+            });
+            
+            // تهيئة الواجهة عند التحميل
+            updateUI('length');
+        });
+    </script>
+</body>
+  </html>
