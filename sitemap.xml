@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- الصفحة الرئيسية -->
+    <url>
+        <loc>https://nexluna.com/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- محولات الوحدات الرئيسية -->
+    <url>
+        <loc>https://nexluna.com/length-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/length-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/length-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/weight-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/weight-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/weight-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/area-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/area-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/area-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/temperature-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/temperature-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/temperature-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/volume-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/volume-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/volume-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- محولات متخصصة -->
+    <url>
+        <loc>https://nexluna.com/meter-to-feet.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/km-to-miles.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/kg-to-pounds.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/celsius-to-fahrenheit.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- صفحات المعلومات والمقالات -->
+    <url>
+        <loc>https://nexluna.com/blog/</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/articles/</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/articles/unit-conversion-guide.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/articles/metric-system-explained.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/articles/imperial-system-guide.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/articles/cooking-measurements.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/articles/measurement-history.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- صفحات الدعم والمعلومات -->
+    <url>
+        <loc>https://nexluna.com/about.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/contact.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/privacy.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/terms.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/faq.html</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- النسخة الإنجليزية -->
+    <url>
+        <loc>https://nexluna.com/en/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/en/length-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/length-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/length-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nexluna.com/en/weight-converter.html</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://nexluna.com/weight-converter.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://nexluna.com/en/weight-converter.html" />
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
