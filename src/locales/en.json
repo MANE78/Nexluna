@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Nexluna - Free and Easy Unit Conversion Tool",
+    "description": "Free and accurate unit conversion tool - convert length, weight, area, temperature, and volume easily. Get instant and precise results for all types of conversions.",
+    "keywords": "unit converter, length conversion, weight conversion, area conversion, temperature conversion, volume conversion, calculator, free tool, Nexluna"
+  },
+  "navigation": {
+    "home": "Home",
+    "length": "Length",
+    "weight": "Weight",
+    "area": "Area", 
+    "temperature": "Temperature",
+    "volume": "Volume",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Nexluna - Comprehensive Unit Conversion Tool",
+    "subtitle": "Free and easy-to-use tool for converting all types of measurement units with precision and lightning speed",
+    "description": "Get accurate conversions for length, weight, area, temperature, and volume with an easy-to-use interface and instant results",
+    "cta_button": "Start Converting Now",
+    "features": [
+      "100% accurate and free conversion",
+      "Support for 50+ measurement units",
+      "Easy and responsive interface",
+      "Instant results without page refresh",
+      "Available in Arabic and English"
+    ]
+  },
+  "converter": {
+    "title": "{type} Unit Converter",
+    "from": "From",
+    "to": "To", 
+    "enter_value": "Enter value",
+    "result": "Result",
+    "swap": "Swap",
+    "clear": "Clear",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "invalid_input": "Please enter a valid value",
+    "result_text": "{value} {fromUnit} = {result} {toUnit}",
+    "placeholder": "Enter value to convert"
+  },
+  "units": {
+    "length": {
+      "title": "Length",
+      "description": "Convert length and distance units",
+      "km": "Kilometer",
+      "m": "Meter",
+      "cm": "Centimeter",
+      "mm": "Millimeter", 
+      "mi": "Mile",
+      "yd": "Yard",
+      "ft": "Foot",
+      "in": "Inch"
+    },
+    "weight": {
+      "title": "Weight",
+      "description": "Convert weight and mass units",
+      "t": "Ton",
+      "kg": "Kilogram",
+      "g": "Gram",
+      "mg": "Milligram",
+      "lb": "Pound",
+      "oz": "Ounce"
+    },
+    "area": {
+      "title": "Area",
+      "description": "Convert area units", 
+      "km2": "Square Kilometer",
+      "m2": "Square Meter",
+      "cm2": "Square Centimeter",
+      "mm2": "Square Millimeter",
+      "ha": "Hectare",
+      "acre": "Acre",
+      "ft2": "Square Foot",
+      "in2": "Square Inch"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "Convert temperature units",
+      "celsius": "Celsius",
+      "fahrenheit": "Fahrenheit",
+      "kelvin": "Kelvin"
+    },
+    "volume": {
+      "title": "Volume",
+      "description": "Convert volume and capacity units",
+      "m3": "Cubic Meter",
+      "l": "Liter",
+      "ml": "Milliliter",
+      "gal": "Gallon", 
+      "qt": "Quart",
+      "pt": "Pint",
+      "cup": "Cup",
+      "fl_oz": "Fluid Ounce"
+    }
+  },
+  "common_conversions": {
+    "title": "Common Conversions",
+    "length": [
+      "1 meter = 3.28 feet",
+      "1 kilometer = 0.62 mile", 
+      "1 foot = 12 inches",
+      "1 yard = 3 feet"
+    ],
+    "weight": [
+      "1 kilogram = 2.20 pounds",
+      "1 pound = 16 ounces",
+      "1 ton = 1000 kilograms"
+    ],
+    "area": [
+      "1 hectare = 2.47 acres",
+      "1 square kilometer = 100 hectares",
+      "1 acre = 43,560 square feet"
+    ],
+    "temperature": [
+      "0°C = 32°F = 273.15K",
+      "100°C = 212°F = 373.15K"
+    ],
+    "volume": [
+      "1 liter = 1000 milliliters",
+      "1 gallon = 3.79 liters", 
+      "1 cubic meter = 1000 liters"
+    ]
+  },
+  "info_sections": {
+    "what_is": {
+      "title": "What is {type} Unit Conversion?",
+      "length": "Length unit conversion is the process of changing a distance value from one measurement unit to another. The world uses two main systems: the metric system (meter, kilometer, centimeter) and the imperial system (foot, inch, mile). We provide you with a precise and easy tool to convert between all these units with one click.",
+      "weight": "Weight unit conversion helps you convert mass between different systems. The metric system uses kilograms and grams, while the imperial system relies on pounds and ounces. Whether you're cooking, shopping, or working in a scientific field, you'll need these precise conversions.",
+      "area": "Area unit conversion is essential in real estate, agriculture, and engineering. From square meters to hectares, and from acres to square feet, we provide all the conversions you need with high accuracy and instant results.",
+      "temperature": "Converting temperatures between Celsius, Fahrenheit, and Kelvin is fundamental in cooking, science, and weather. Each scale has its specific uses, and our tool ensures accurate and understandable conversions.",
+      "volume": "Volume and capacity unit conversion is important in cooking, industry, and commerce. From liters to gallons, and from milliliters to fluid ounces, get accurate results for all your needs."
+    },
+    "how_to_use": {
+      "title": "How to Use {type} Unit Converter",
+      "steps": [
+        "Enter the value to be converted in the first field",
+        "Select the original unit from the dropdown menu",
+        "Choose the unit you want to convert to",
+        "The result will appear instantly with high precision",
+        "You can use the swap button to reverse the conversion",
+        "Copy the result or share it with others"
+      ]
+    },
+    "why_choose": {
+      "title": "Why Choose Nexluna?",
+      "reasons": [
+        "High accuracy in all conversions",
+        "Lightning speed in getting results",
+        "Easy and understandable interface for everyone",
+        "Full support for Arabic language",
+        "Completely free with no annoying ads",
+        "Works on all devices and browsers",
+        "Continuous updates and permanent improvements"
+      ]
+    }
+  },
+  "footer": {
+    "description": "Nexluna is a free and comprehensive tool for converting all types of measurement units. We provide fast and accurate service to help you with all your daily and professional needs.",
+    "quick_links": "Quick Links",
+    "converters": "Converters", 
+    "resources": "Resources",
+    "support": "Support",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "articles": "Articles",
+    "guides": "Guides",
+    "faq": "FAQ",
+    "sitemap": "Sitemap",
+    "copyright": "© 2024 Nexluna. All rights reserved."
+  },
+  "blog": {
+    "title": "Nexluna Blog",
+    "subtitle": "Your comprehensive guide to the world of measurement units and conversion",
+    "read_more": "Read More",
+    "recent_posts": "Recent Posts",
+    "categories": "Categories"
+  }
+}

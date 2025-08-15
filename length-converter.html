@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="lang-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول وحدات الطول - تحويل متر، كيلومتر، ميل، قدم، إنش | نِكسلونا</title>
+    <meta name="description" content="محول وحدات الطول المجاني والدقيق - تحويل بين المتر والكيلومتر والميل والقدم والإنش والياردة والسنتيمتر والمليمتر. نتائج فورية ودقة عالية.">
+    <meta name="keywords" content="محول الطول، تحويل المتر، تحويل الكيلومتر، تحويل الميل، تحويل القدم، تحويل الإنش، محول المسافة، حاسبة الطول">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="محول وحدات الطول - نِكسلونا">
+    <meta property="og:description" content="محول وحدات الطول المجاني والدقيق - تحويل بين جميع وحدات القياس للطول والمسافة">
+    <meta property="og:url" content="https://nexluna.com/length-converter.html">
+    
+    <!-- الروابط والأنماط -->
+    <link rel="canonical" href="https://nexluna.com/length-converter.html">
+    <link rel="stylesheet" href="/src/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- البيانات المنظمة -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "محول وحدات الطول",
+      "description": "محول وحدات الطول المجاني والدقيق - تحويل بين المتر والكيلومتر والميل والقدم والإنش",
+      "url": "https://nexluna.com/length-converter.html",
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "محول وحدات الطول",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://nexluna.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "محول وحدات الطول",
+          "item": "https://nexluna.com/length-converter.html"
+        }]
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- الشريط العلوي -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/">
+                        <span class="logo-text">نِكسلونا</span>
+                        <span class="logo-subtitle">Nexluna</span>
+                    </a>
+                </div>
+                
+                <nav class="nav">
+                    <a href="/" class="nav-link">الرئيسية</a>
+                    <a href="/weight-converter.html" class="nav-link">تحويل الوزن</a>
+                    <a href="/area-converter.html" class="nav-link">تحويل المساحة</a>
+                    <a href="/temperature-converter.html" class="nav-link">تحويل الحرارة</a>
+                    <a href="/volume-converter.html" class="nav-link">تحويل الحجم</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- مسار التنقل -->
+        <nav class="breadcrumb" aria-label="مسار التنقل">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="/">الرئيسية</a></li>
+                    <li>محول وحدات الطول</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- العنوان الرئيسي -->
+        <section class="page-header">
+            <div class="container">
+                <h1>محول وحدات الطول</h1>
+                <p class="page-description">
+                    محول مجاني ودقيق لتحويل جميع وحدات الطول والمسافة. تحويل بين المتر والكيلومتر والميل والقدم والإنش والياردة بدقة عالية.
+                </p>
+            </div>
+        </section>
+
+        <!-- المحول -->
+        <section class="section">
+            <div class="container">
+                <div class="converter" data-unit-type="length">
+                    <div class="converter-form">
+                        <div class="converter-row">
+                            <div class="converter-field">
+                                <label for="lengthFromValue" class="form-label">من</label>
+                                <input type="number" id="lengthFromValue" class="form-input" placeholder="أدخل قيمة الطول" step="any">
+                                <select id="lengthFromUnit" class="form-select">
+                                    <option value="km">كيلومتر (km)</option>
+                                    <option value="m" selected>متر (m)</option>
+                                    <option value="cm">سنتيمتر (cm)</option>
+                                    <option value="mm">مليمتر (mm)</option>
+                                    <option value="mi">ميل (mi)</option>
+                                    <option value="yd">ياردة (yd)</option>
+                                    <option value="ft">قدم (ft)</option>
+                                    <option value="in">إنش (in)</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="swap-btn" aria-label="تبديل الوحدات">⇅</button>
+                            
+                            <div class="converter-field">
+                                <label for="lengthToValue" class="form-label">إلى</label>
+                                <input type="number" id="lengthToValue" class="form-input" readonly>
+                                <select id="lengthToUnit" class="form-select">
+                                    <option value="km">كيلومتر (km)</option>
+                                    <option value="m">متر (m)</option>
+                                    <option value="cm">سنتيمتر (cm)</option>
+                                    <option value="mm">مليمتر (mm)</option>
+                                    <option value="mi">ميل (mi)</option>
+                                    <option value="yd">ياردة (yd)</option>
+                                    <option value="ft" selected>قدم (ft)</option>
+                                    <option value="in">إنش (in)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="converter-actions">
+                            <button type="button" class="btn btn-secondary clear-btn">مسح</button>
+                            <button type="button" class="btn btn-primary copy-btn" disabled>نسخ النتيجة</button>
+                        </div>
+                    </div>
+
+                    <div class="result-display" style="display: none;">
+                        <div class="result-value"></div>
+                        <div class="result-text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التحويلات الشائعة -->
+        <section class="section">
+            <div class="container">
+                <div class="common-conversions">
+                    <h2>تحويلات الطول الشائعة</h2>
+                    <div class="conversion-grid">
+                        <div class="conversion-item">
+                            <strong>1 متر =</strong>
+                            <span>3.28084 قدم</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 كيلومتر =</strong>
+                            <span>0.621371 ميل</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 ميل =</strong>
+                            <span>1.60934 كيلومتر</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 قدم =</strong>
+                            <span>12 إنش</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 ياردة =</strong>
+                            <span>3 أقدام</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 إنش =</strong>
+                            <span>2.54 سنتيمتر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- معلومات مفصلة -->
+        <section class="section">
+            <div class="container">
+                <article class="info-section">
+                    <h2>دليل شامل لتحويل وحدات الطول</h2>
+                    
+                    <div class="info-content">
+                        <h3>ما هي وحدات الطول؟</h3>
+                        <p>
+                            وحدات الطول هي معايير قياس تستخدم لتحديد المسافة بين نقطتين أو طول جسم معين. تطورت هذه الوحدات عبر التاريخ وتختلف من منطقة لأخرى، لكن اليوم نستخدم بشكل رئيسي نظامين: النظام المتري والنظام الإمبراطوري.
+                        </p>
+
+                        <h3>النظام المتري</h3>
+                        <p>
+                            النظام المتري هو النظام الأكثر استخداماً في العالم ويعتمد على المتر كوحدة أساسية. يتميز بسهولة التحويل بين وحداته المختلفة حيث تعتمد على مضاعفات العشرة:
+                        </p>
+                        <ul>
+                            <li><strong>المتر (m):</strong> الوحدة الأساسية للطول في النظام الدولي</li>
+                            <li><strong>الكيلومتر (km):</strong> 1000 متر، يستخدم للمسافات الطويلة</li>
+                            <li><strong>السنتيمتر (cm):</strong> 0.01 متر، يستخدم للأطوال الصغيرة</li>
+                            <li><strong>المليمتر (mm):</strong> 0.001 متر، يستخدم للقياسات الدقيقة</li>
+                        </ul>
+
+                        <h3>النظام الإمبراطوري</h3>
+                        <p>
+                            النظام الإمبراطوري يستخدم بشكل رئيسي في الولايات المتحدة وبعض الدول الأخرى. وحداته الرئيسية:
+                        </p>
+                        <ul>
+                            <li><strong>الإنش (in):</strong> أصغر وحدة شائعة، تساوي 2.54 سنتيمتر</li>
+                            <li><strong>القدم (ft):</strong> 12 إنش، تساوي 0.3048 متر</li>
+                            <li><strong>الياردة (yd):</strong> 3 أقدام، تساوي 0.9144 متر</li>
+                            <li><strong>الميل (mi):</strong> 5280 قدم، يساوي 1.609 كيلومتر</li>
+                        </ul>
+
+                        <h3>كيفية استخدام محول وحدات الطول</h3>
+                        <ol>
+                            <li>أدخل القيمة المراد تحويلها في الحقل الأول</li>
+                            <li>اختر الوحدة الأصلية من القائمة المنسدلة</li>
+                            <li>اختر الوحدة التي تريد التحويل إليها</li>
+                            <li>ستظهر النتيجة فوراً بدقة عالية</li>
+                            <li>يمكنك استخدام زر التبديل لعكس التحويل</li>
+                        </ol>
+
+                        <h3>أمثلة عملية لتحويل وحدات الطول</h3>
+                        <div class="examples-grid">
+                            <div class="example">
+                                <h4>مثال 1: تحويل من متر إلى قدم</h4>
+                                <p>لتحويل 5 أمتار إلى أقدام:</p>
+                                <p class="calculation">5 متر × 3.28084 = 16.4042 قدم</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h4>مثال 2: تحويل من كيلومتر إلى ميل</h4>
+                                <p>لتحويل 10 كيلومترات إلى أميال:</p>
+                                <p class="calculation">10 كم × 0.621371 = 6.21371 ميل</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h4>مثال 3: تحويل من إنش إلى سنتيمتر</h4>
+                                <p>لتحويل 12 إنش إلى سنتيمتر:</p>
+                                <p class="calculation">12 إنش × 2.54 = 30.48 سم</p>
+                            </div>
+                        </div>
+
+                        <h3>نصائح مهمة لتحويل وحدات الطول</h3>
+                        <ul>
+                            <li>تأكد من اختيار الوحدة الصحيحة قبل إجراء التحويل</li>
+                            <li>استخدم عدد مناسب من الخانات العشرية حسب دقة القياس المطلوبة</li>
+                            <li>تذكر أن التحويل من وحدة كبيرة إلى صغيرة ينتج عنه رقم أكبر</li>
+                            <li>احفظ التحويلات الشائعة لسهولة الحساب السريع</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>محولات أخرى</h4>
+                    <ul class="footer-links">
+                        <li><a href="/weight-converter.html">محول وحدات الوزن</a></li>
+                        <li><a href="/area-converter.html">محول وحدات المساحة</a></li>
+                        <li><a href="/temperature-converter.html">محول درجات الحرارة</a></li>
+                        <li><a href="/volume-converter.html">محول وحدات الحجم</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>معلومات مفيدة</h4>
+                    <ul class="footer-links">
+                        <li><a href="/articles/length-conversion-guide.html">دليل تحويل الأطوال</a></li>
+                        <li><a href="/articles/metric-vs-imperial.html">المتري مقابل الإمبراطوري</a></li>
+                        <li><a href="/articles/measurement-history.html">تاريخ وحدات القياس</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 نِكسلونا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/app.js"></script>
+    <script>
+        // تهيئة الصفحة لنوع تحويل الطول
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحديد نوع التحويل
+            if (window.converterApp) {
+                window.converterApp.switchUnitType('length');
+            }
+        });
+    </script>
+</body>
+</html>

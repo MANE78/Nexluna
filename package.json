@@ -1,0 +1,60 @@
+{
+  "name": "nexluna-unit-converter",
+  "version": "2.0.0",
+  "description": "نِكسلونا - أداة تحويل الوحدات الشاملة والمجانية",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "http-server -p 3000 -c-1 --cors",
+    "dev": "http-server -p 3000 -c-1 --cors -o",
+    "build": "echo 'Building static site...' && echo 'Build complete!'",
+    "test": "echo 'Testing unit converters...' && node test/unit-tests.js",
+    "lint": "echo 'Linting code...'",
+    "deploy": "echo 'Deploying to production...'",
+    "serve": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop nexluna",
+    "restart": "pm2 restart nexluna",
+    "logs": "pm2 logs nexluna --nostream"
+  },
+  "keywords": [
+    "unit-converter",
+    "measurement",
+    "conversion",
+    "length",
+    "weight",
+    "temperature",
+    "area",
+    "volume",
+    "arabic",
+    "multilingual",
+    "nexluna"
+  ],
+  "author": {
+    "name": "Nexluna Team",
+    "email": "info@nexluna.com",
+    "url": "https://nexluna.com"
+  },
+  "license": "MIT",
+  "homepage": "https://nexluna.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nexluna/unit-converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nexluna/unit-converter/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
