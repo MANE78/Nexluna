@@ -120,21 +120,52 @@
         <div class="container">
             <div class="header-content">
                 <!-- الشعار -->
-                <div class="logo">
-                    <a href="/" aria-label="نِكسلونا - الصفحة الرئيسية">
-                        <span class="logo-text">نِكسلونا</span>
-                        <span class="logo-subtitle">Nexluna</span>
-                    </a>
-                </div>
+                <a href="/" class="logo" aria-label="الصفحة الرئيسية">
+                    <span class="logo-text" data-i18n="branding.logo">نِكسلونا</span>
+                    <span class="logo-subtitle" data-i18n="branding.subtitle">أداة التحويل الشاملة</span>
+                </a>
+                
+                <!-- قائمة الهامبرغر للهاتف -->
+                <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 
                 <!-- التنقل الرئيسي -->
                 <nav class="nav" role="navigation" aria-label="التنقل الرئيسي">
-                    <a href="#converter" class="nav-link" data-i18n="navigation.home">الرئيسية</a>
-                    <a href="#features" class="nav-link">الميزات</a>
-                    <a href="#about" class="nav-link" data-i18n="navigation.about">حولنا</a>
+                    <a href="/" class="nav-link" data-i18n="navigation.home">الرئيسية</a>
+                    <a href="/length-converter.html" class="nav-link" data-i18n="navigation.length">الطول</a>
+                    <a href="/weight-converter.html" class="nav-link" data-i18n="navigation.weight">الوزن</a>
+                    <a href="/area-converter.html" class="nav-link" data-i18n="navigation.area">المساحة</a>
+                    <a href="/temperature-converter.html" class="nav-link" data-i18n="navigation.temperature">درجة الحرارة</a>
+                    <a href="/volume-converter.html" class="nav-link" data-i18n="navigation.volume">الحجم</a>
                     <a href="/blog/" class="nav-link" data-i18n="navigation.blog">المدونة</a>
+                    <a href="/contact.html" class="nav-link" data-i18n="navigation.contact">اتصل بنا</a>
                     
                     <!-- مبدل اللغة -->
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang-switch="ar" aria-label="العربية">
+                            العربية
+                        </button>
+                        <button class="lang-btn" data-lang-switch="en" aria-label="English">
+                            English
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- القائمة المنسدلة للهاتف -->
+                <nav class="nav-dropdown" role="navigation" aria-label="قائمة الهاتف">
+                    <a href="/" class="nav-link" data-i18n="navigation.home">الرئيسية</a>
+                    <a href="/length-converter.html" class="nav-link" data-i18n="navigation.length">الطول</a>
+                    <a href="/weight-converter.html" class="nav-link" data-i18n="navigation.weight">الوزن</a>
+                    <a href="/area-converter.html" class="nav-link" data-i18n="navigation.area">المساحة</a>
+                    <a href="/temperature-converter.html" class="nav-link" data-i18n="navigation.temperature">درجة الحرارة</a>
+                    <a href="/volume-converter.html" class="nav-link" data-i18n="navigation.volume">الحجم</a>
+                    <a href="/blog/" class="nav-link" data-i18n="navigation.blog">المدونة</a>
+                    <a href="/contact.html" class="nav-link" data-i18n="navigation.contact">اتصل بنا</a>
+                    
+                    <!-- مبدل اللغة للهاتف -->
                     <div class="language-switcher">
                         <button class="lang-btn active" data-lang-switch="ar" aria-label="العربية">
                             العربية

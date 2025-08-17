@@ -16,6 +16,10 @@
     "contact": "Contact",
     "language": "Language"
   },
+  "branding": {
+    "logo": "Nexluna",
+    "subtitle": "Unit Conversion Tool"
+  },
   "hero": {
     "title": "Nexluna - Comprehensive Unit Conversion Tool",
     "subtitle": "Free and easy-to-use tool for converting all types of measurement units with precision and lightning speed",

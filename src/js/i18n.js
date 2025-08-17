@@ -110,6 +110,14 @@ class I18n {
     document.dispatchEvent(new CustomEvent('languageChanged', {
       detail: { language: newLang, isRTL: this.isRTL }
     }));
+
+    // تحديث URL
+    this.updateURL();
+
+    // إعادة تحميل الصفحة لضمان تطبيق جميع التغييرات
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   }
 
   // تحديث لغة الصفحة
@@ -158,6 +166,34 @@ class I18n {
       const [attr, key] = attrData.split(':');
       const translation = this.t(key);
       element.setAttribute(attr, translation);
+    });
+
+    // تحديث أزرار اللغة
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      const targetLang = btn.getAttribute('data-lang-switch');
+      if (targetLang) {
+        btn.classList.toggle('active', targetLang === this.currentLanguage);
+      }
+    });
+
+    // تحديث روابط التنقل المباشرة
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('http')) {
+        // تحديث رابط الصفحة حسب اللغة
+        if (this.currentLanguage === 'en' && !href.includes('/en/')) {
+          // إذا كانت اللغة إنجليزية وليس هناك /en/ في الرابط
+          if (href === '/') {
+            link.href = '/en/';
+          } else if (!href.startsWith('/en')) {
+            link.href = '/en' + href;
+          }
+        } else if (this.currentLanguage === 'ar' && href.includes('/en/')) {
+          // إذا كانت اللغة عربية والرابط يحتوي على /en/
+          link.href = href.replace('/en/', '/').replace('/en', '/');
+        }
+      }
     });
   }
 

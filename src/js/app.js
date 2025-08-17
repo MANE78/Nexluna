@@ -574,6 +574,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // تهيئة التطبيق
     await window.converterApp.initialize();
     
+    // إعداد القائمة المتجاوبة
+    setupResponsiveMenu();
+    
     // إضافة معالجات للأخطاء غير المتوقعة
     window.addEventListener('error', (event) => {
       console.error('خطأ غير متوقع:', event.error);
@@ -587,6 +590,46 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('فشل في تهيئة التطبيق:', error);
   }
 });
+
+// إعداد القائمة المتجاوبة
+function setupResponsiveMenu() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navDropdown = document.querySelector('.nav-dropdown');
+  
+  if (menuToggle && navDropdown) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navDropdown.classList.contains('show');
+      
+      if (isOpen) {
+        navDropdown.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        navDropdown.classList.add('show');
+        menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // إغلاق القائمة عند النقر على رابط
+    navDropdown.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navDropdown.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // إغلاق القائمة عند النقر خارجها
+    document.addEventListener('click', (event) => {
+      if (!menuToggle.contains(event.target) && !navDropdown.contains(event.target)) {
+        navDropdown.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+}
 
 // تصدير للاستخدام في ملفات أخرى
 export default UnitConverterApp;
