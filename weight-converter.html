@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="lang-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول وحدات الوزن - تحويل كيلو، غرام، رطل، أونصة، طن | نِكسلونا</title>
+    <meta name="description" content="محول وحدات الوزن المجاني والدقيق - تحويل بين الكيلوغرام والغرام والرطل والأونصة والطن. أداة سهلة وسريعة لجميع تحويلات الوزن والكتلة.">
+    <meta name="keywords" content="محول الوزن، تحويل الكيلو، تحويل الغرام، تحويل الرطل، تحويل الأونصة، محول الكتلة، حاسبة الوزن">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="محول وحدات الوزن - نِكسلونا">
+    <meta property="og:description" content="محول وحدات الوزن المجاني والدقيق - تحويل بين جميع وحدات قياس الوزن والكتلة">
+    <meta property="og:url" content="https://nexluna.com/weight-converter.html">
+    
+    <!-- الروابط والأنماط -->
+    <link rel="canonical" href="https://nexluna.com/weight-converter.html">
+    <link rel="stylesheet" href="/src/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- البيانات المنظمة -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "محول وحدات الوزن",
+      "description": "محول وحدات الوزن المجاني والدقيق - تحويل بين الكيلوغرام والغرام والرطل والأونصة والطن",
+      "url": "https://nexluna.com/weight-converter.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://nexluna.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "محول وحدات الوزن",
+          "item": "https://nexluna.com/weight-converter.html"
+        }]
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- الشريط العلوي -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/">
+                        <span class="logo-text">نِكسلونا</span>
+                        <span class="logo-subtitle">Nexluna</span>
+                    </a>
+                </div>
+                
+                <nav class="nav">
+                    <a href="/" class="nav-link">الرئيسية</a>
+                    <a href="/length-converter.html" class="nav-link">تحويل الطول</a>
+                    <a href="/area-converter.html" class="nav-link">تحويل المساحة</a>
+                    <a href="/temperature-converter.html" class="nav-link">تحويل الحرارة</a>
+                    <a href="/volume-converter.html" class="nav-link">تحويل الحجم</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- العنوان الرئيسي -->
+        <section class="page-header">
+            <div class="container">
+                <h1>محول وحدات الوزن والكتلة</h1>
+                <p class="page-description">
+                    أداة مجانية ودقيقة لتحويل جميع وحدات الوزن والكتلة. تحويل سهل وسريع بين الكيلوغرام والغرام والرطل والأونصة والطن.
+                </p>
+            </div>
+        </section>
+
+        <!-- المحول -->
+        <section class="section">
+            <div class="container">
+                <div class="converter" data-unit-type="weight">
+                    <div class="converter-form">
+                        <div class="converter-row">
+                            <div class="converter-field">
+                                <label for="weightFromValue" class="form-label">من</label>
+                                <input type="number" id="weightFromValue" class="form-input" placeholder="أدخل قيمة الوزن" step="any">
+                                <select id="weightFromUnit" class="form-select">
+                                    <option value="t">طن (t)</option>
+                                    <option value="kg" selected>كيلوغرام (kg)</option>
+                                    <option value="g">غرام (g)</option>
+                                    <option value="mg">مليغرام (mg)</option>
+                                    <option value="lb">رطل (lb)</option>
+                                    <option value="oz">أونصة (oz)</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="swap-btn" aria-label="تبديل الوحدات">⇅</button>
+                            
+                            <div class="converter-field">
+                                <label for="weightToValue" class="form-label">إلى</label>
+                                <input type="number" id="weightToValue" class="form-input" readonly>
+                                <select id="weightToUnit" class="form-select">
+                                    <option value="t">طن (t)</option>
+                                    <option value="kg">كيلوغرام (kg)</option>
+                                    <option value="g">غرام (g)</option>
+                                    <option value="mg">مليغرام (mg)</option>
+                                    <option value="lb" selected>رطل (lb)</option>
+                                    <option value="oz">أونصة (oz)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-display" style="display: none;">
+                        <div class="result-value"></div>
+                        <div class="result-text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التحويلات الشائعة -->
+        <section class="section">
+            <div class="container">
+                <div class="common-conversions">
+                    <h2>تحويلات الوزن الشائعة</h2>
+                    <div class="conversion-grid">
+                        <div class="conversion-item">
+                            <strong>1 كيلوغرام =</strong>
+                            <span>2.20462 رطل</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 كيلوغرام =</strong>
+                            <span>1000 غرام</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 رطل =</strong>
+                            <span>16 أونصة</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 طن =</strong>
+                            <span>1000 كيلوغرام</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 غرام =</strong>
+                            <span>1000 مليغرام</span>
+                        </div>
+                        <div class="conversion-item">
+                            <strong>1 أونصة =</strong>
+                            <span>28.3495 غرام</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- معلومات مفصلة -->
+        <section class="section">
+            <div class="container">
+                <article class="info-section">
+                    <h2>دليل شامل لتحويل وحدات الوزن والكتلة</h2>
+                    
+                    <div class="info-content">
+                        <h3>الفرق بين الوزن والكتلة</h3>
+                        <p>
+                            قبل التعمق في تحويل الوحدات، من المهم فهم الفرق بين الوزن والكتلة. الكتلة هي كمية المادة في جسم معين ولا تتغير بتغيير المكان، بينما الوزن هو قوة الجاذبية المؤثرة على الكتلة ويختلف حسب الموقع. في الاستخدام اليومي، نستخدم مصطلحي الوزن والكتلة بالتبادل.
+                        </p>
+
+                        <h3>وحدات الوزن في النظام المتري</h3>
+                        <p>
+                            النظام المتري يعتمد على الكيلوغرام كوحدة أساسية للكتلة، وهو النظام المعتمد عالمياً في العلوم والتجارة:
+                        </p>
+                        <ul>
+                            <li><strong>الطن (t):</strong> 1000 كيلوغرام، يستخدم للأوزان الثقيلة</li>
+                            <li><strong>الكيلوغرام (kg):</strong> الوحدة الأساسية، يساوي 1000 غرام</li>
+                            <li><strong>الغرام (g):</strong> وحدة صغيرة، تستخدم للأطعمة والمواد الخفيفة</li>
+                            <li><strong>المليغرام (mg):</strong> 0.001 غرام، يستخدم في الطب والصيدلة</li>
+                        </ul>
+
+                        <h3>وحدات الوزن في النظام الإمبراطوري</h3>
+                        <p>
+                            النظام الإمبراطوري لا يزال مستخدماً في الولايات المتحدة وبعض المجالات الأخرى:
+                        </p>
+                        <ul>
+                            <li><strong>الرطل (lb):</strong> يساوي 0.453592 كيلوغرام تقريباً</li>
+                            <li><strong>الأونصة (oz):</strong> 1/16 من الرطل، تساوي 28.3495 غرام</li>
+                        </ul>
+
+                        <h3>استخدامات وحدات الوزن المختلفة</h3>
+                        <div class="usage-examples">
+                            <div class="usage-category">
+                                <h4>في الطبخ</h4>
+                                <ul>
+                                    <li>الغرام والكيلوغرام للمقادير الكبيرة</li>
+                                    <li>المليغرام للتوابل والإضافات</li>
+                                    <li>الكوب والملعقة كوحدات حجم تقريبية</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage-category">
+                                <h4>في الطب</h4>
+                                <ul>
+                                    <li>المليغرام لجرعات الأدوية</li>
+                                    <li>الكيلوغرام لوزن الجسم</li>
+                                    <li>الميكروغرام للجرعات الدقيقة جداً</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage-category">
+                                <h4>في التجارة</h4>
+                                <ul>
+                                    <li>الطن للشحن والبضائع الثقيلة</li>
+                                    <li>الكيلوغرام للبضائع العادية</li>
+                                    <li>الغرام للمعادن الثمينة</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3>كيفية التحويل بين وحدات الوزن</h3>
+                        <p>التحويل بين وحدات الوزن يتم باستخدام معاملات تحويل ثابتة:</p>
+                        
+                        <div class="conversion-formulas">
+                            <div class="formula">
+                                <h4>من كيلوغرام إلى رطل:</h4>
+                                <p class="calculation">الوزن بالرطل = الوزن بالكيلوغرام × 2.20462</p>
+                            </div>
+                            
+                            <div class="formula">
+                                <h4>من رطل إلى كيلوغرام:</h4>
+                                <p class="calculation">الوزن بالكيلوغرام = الوزن بالرطل ÷ 2.20462</p>
+                            </div>
+                            
+                            <div class="formula">
+                                <h4>من غرام إلى أونصة:</h4>
+                                <p class="calculation">الوزن بالأونصة = الوزن بالغرام ÷ 28.3495</p>
+                            </div>
+                        </div>
+
+                        <h3>أمثلة عملية</h3>
+                        <div class="examples-grid">
+                            <div class="example">
+                                <h4>وصفة طبخ</h4>
+                                <p>تتطلب الوصفة 500 غرام من الدقيق، كم هذا بالرطل؟</p>
+                                <p class="calculation">500 غ ÷ 453.592 = 1.10 رطل تقريباً</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h4>وزن الطفل</h4>
+                                <p>وزن الطفل 15 رطلاً، كم هذا بالكيلوغرام؟</p>
+                                <p class="calculation">15 رطل ÷ 2.20462 = 6.80 كيلوغرام</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h4>جرعة دواء</h4>
+                                <p>الجرعة 250 مليغرام، كم هذا بالغرام؟</p>
+                                <p class="calculation">250 مليغ ÷ 1000 = 0.25 غرام</p>
+                            </div>
+                        </div>
+
+                        <h3>نصائح مهمة للتحويل</h3>
+                        <ul>
+                            <li>احفظ التحويلات الأساسية: 1 كيلو = 2.2 رطل تقريباً</li>
+                            <li>استخدم الآلة الحاسبة للدقة في التحويلات المهمة</li>
+                            <li>انتبه إلى عدد الخانات العشرية المطلوب</li>
+                            <li>تأكد من الوحدة المطلوبة قبل التحويل</li>
+                            <li>راجع النتيجة للتأكد من معقوليتها</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>محولات أخرى</h4>
+                    <ul class="footer-links">
+                        <li><a href="/length-converter.html">محول وحدات الطول</a></li>
+                        <li><a href="/area-converter.html">محول وحدات المساحة</a></li>
+                        <li><a href="/temperature-converter.html">محول درجات الحرارة</a></li>
+                        <li><a href="/volume-converter.html">محول وحدات الحجم</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 نِكسلونا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.converterApp) {
+                window.converterApp.switchUnitType('weight');
+            }
+        });
+    </script>
+</body>
+</html>

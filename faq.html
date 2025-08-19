@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="lang-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>الأسئلة الشائعة | نِكسلونا - إجابات لجميع استفساراتك</title>
+    <meta name="description" content="اعثر على إجابات سريعة لأكثر الأسئلة شيوعاً حول استخدام محولات الوحدات في نِكسلونا. دليل شامل للمساعدة والدعم.">
+    <meta name="keywords" content="الأسئلة الشائعة، مساعدة نِكسلونا، كيفية الاستخدام، دعم، إرشادات، تحويل الوحدات">
+    
+    <link rel="canonical" href="https://nexluna.com/faq.html">
+    <link rel="alternate" hreflang="ar" href="https://nexluna.com/faq.html">
+    <link rel="alternate" hreflang="en" href="https://nexluna.com/en/faq.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/assets/css/main.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "الأسئلة الشائعة - نِكسلونا",
+      "description": "إجابات لأكثر الأسئلة شيوعاً حول استخدام محولات الوحدات",
+      "url": "https://nexluna.com/faq.html",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل خدمة نِكسلونا مجانية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، جميع خدمات نِكسلونا مجانية بالكامل ولا نتقاضى أي رسوم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل محولات الوحدات دقيقة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، نستخدم أحدث المعايير الدولية لضمان أقصى دقة في التحويل."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-md);
+            background: var(--bg-primary);
+            transition: all var(--transition-fast) ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            padding: var(--spacing-lg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: right;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-icon {
+            font-size: var(--font-size-lg);
+            transition: transform var(--transition-fast) ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active {
+            border-color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .search-box input {
+            padding-right: 50px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo" aria-label="الصفحة الرئيسية">
+                    <span class="logo-text" data-i18n="branding.logo">نِكسلونا</span>
+                    <span class="logo-subtitle" data-i18n="branding.subtitle">أداة التحويل الشاملة</span>
+                </a>
+                
+                <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" role="navigation">
+                    <a href="/" class="nav-link" data-i18n="navigation.home">الرئيسية</a>
+                    <a href="/length-converter.html" class="nav-link" data-i18n="navigation.length">الطول</a>
+                    <a href="/weight-converter.html" class="nav-link" data-i18n="navigation.weight">الوزن</a>
+                    <a href="/area-converter.html" class="nav-link" data-i18n="navigation.area">المساحة</a>
+                    <a href="/temperature-converter.html" class="nav-link" data-i18n="navigation.temperature">درجة الحرارة</a>
+                    <a href="/volume-converter.html" class="nav-link" data-i18n="navigation.volume">الحجم</a>
+                    <a href="/blog/" class="nav-link" data-i18n="navigation.blog">المدونة</a>
+                    <a href="/contact.html" class="nav-link" data-i18n="navigation.contact">اتصل بنا</a>
+                    
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang-switch="ar">العربية</button>
+                        <button class="lang-btn" data-lang-switch="en">English</button>
+                    </div>
+                </nav>
+
+                <nav class="nav-dropdown" role="navigation">
+                    <a href="/" class="nav-link" data-i18n="navigation.home">الرئيسية</a>
+                    <a href="/length-converter.html" class="nav-link" data-i18n="navigation.length">الطول</a>
+                    <a href="/weight-converter.html" class="nav-link" data-i18n="navigation.weight">الوزن</a>
+                    <a href="/area-converter.html" class="nav-link" data-i18n="navigation.area">المساحة</a>
+                    <a href="/temperature-converter.html" class="nav-link" data-i18n="navigation.temperature">درجة الحرارة</a>
+                    <a href="/volume-converter.html" class="nav-link" data-i18n="navigation.volume">الحجم</a>
+                    <a href="/blog/" class="nav-link" data-i18n="navigation.blog">المدونة</a>
+                    <a href="/contact.html" class="nav-link" data-i18n="navigation.contact">اتصل بنا</a>
+                    
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang-switch="ar">العربية</button>
+                        <button class="lang-btn" data-lang-switch="en">English</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="hero" style="padding: var(--spacing-2xl) 0;">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>الأسئلة الشائعة</h1>
+                    <p>إجابات سريعة لأكثر الأسئلة شيوعاً حول استخدام نِكسلونا</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="max-width: 800px;">
+                <!-- مربع البحث -->
+                <div class="search-box">
+                    <input type="text" id="faqSearch" class="form-input" placeholder="ابحث في الأسئلة الشائعة...">
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <!-- الأسئلة والأجوبة -->
+                <div id="faqContainer">
+                    
+                    <!-- عام -->
+                    <div class="faq-section" style="margin-bottom: var(--spacing-2xl);">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">عام</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل خدمة نِكسلونا مجانية؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، جميع خدمات نِكسلونا مجانية بالكامل ولا نتقاضى أي رسوم. يمكنك استخدام جميع المحولات والأدوات دون الحاجة للتسجيل أو الدفع.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل أحتاج لإنشاء حساب؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                لا، لا تحتاج لإنشاء حساب أو التسجيل. يمكنك استخدام جميع المحولات فوراً دون أي متطلبات مسبقة.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل الموقع آمن للاستخدام؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، الموقع آمن تماماً. نحن لا نجمع أي معلومات شخصية ولا نحفظ بياناتك. جميع العمليات تتم محلياً في متصفحك.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الاستخدام -->
+                    <div class="faq-section" style="margin-bottom: var(--spacing-2xl);">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">الاستخدام</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                كيف أستخدم محولات الوحدات؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                <ol>
+                                    <li>أدخل القيمة المراد تحويلها في الحقل الأول</li>
+                                    <li>اختر الوحدة الأصلية من القائمة المنسدلة</li>
+                                    <li>اختر الوحدة المراد التحويل إليها</li>
+                                    <li>ستظهر النتيجة فوراً</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل يمكنني نسخ النتائج؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، يمكنك نسخ النتائج بالنقر على زر "نسخ" أو باستخدام اختصار لوحة المفاتيح Ctrl+C عندما تكون النتيجة ظاهرة.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                ماذا يعني زر التبديل؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                زر التبديل (⇄) يقوم بتبديل الوحدات والقيم. مثلاً إذا كنت تحول من متر إلى قدم، سيصبح التحويل من قدم إلى متر.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الدقة -->
+                    <div class="faq-section" style="margin-bottom: var(--spacing-2xl);">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">الدقة والموثوقية</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل محولات الوحدات دقيقة؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، نستخدم أحدث المعايير الدولية المعتمدة لضمان أقصى دقة في التحويل. جميع المعادلات محدثة وفقاً للمعايير العالمية.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                كم عدد الخانات العشرية في النتائج؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعرض النتائج بدقة تصل إلى 10 خانات عشرية عند الضرورة، مع تقريب ذكي لإظهار النتائج الأكثر فائدة للاستخدام العملي.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل يمكنني الاعتماد على النتائج في العمل المهني؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، النتائج دقيقة جداً ومناسبة للاستخدام المهني. ومع ذلك، ننصح بالتحقق من النتائج الحرجة باستخدام مصادر متعددة للتأكد.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المشاكل الفنية -->
+                    <div class="faq-section" style="margin-bottom: var(--spacing-2xl);">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">المشاكل الفنية</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                لا يعمل المحول، ماذا أفعل؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                <ol>
+                                    <li>تأكد من أن JavaScript مفعل في متصفحك</li>
+                                    <li>حدث صفحة الويب (F5 أو Ctrl+R)</li>
+                                    <li>امسح ذاكرة التخزين المؤقت للمتصفح</li>
+                                    <li>جرب متصفح آخر</li>
+                                    <li>إذا استمرت المشكلة، اتصل بنا</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                الموقع لا يظهر بشكل صحيح على الهاتف
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                الموقع مصمم ليعمل على جميع الأجهزة. إذا واجهت مشكلة، جرب تحديث المتصفح أو استخدام متصفح آخر. يمكنك أيضاً قلب الهاتف للوضع الأفقي.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                النتيجة تظهر "خطأ" أو "غير صحيح"
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                هذا يحدث عادة عند إدخال قيم غير صحيحة أو خارج النطاق المسموح. تأكد من إدخال أرقام صحيحة فقط واختيار الوحدات الصحيحة.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المحولات المختلفة -->
+                    <div class="faq-section" style="margin-bottom: var(--spacing-2xl);">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">المحولات المختلفة</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                ما هي أنواع المحولات المتاحة؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نوفر محولات لـ:
+                                <ul>
+                                    <li>الطول (متر، قدم، إنش، كيلومتر، ميل...)</li>
+                                    <li>الوزن (كيلو، رطل، أونصة، طن...)</li>
+                                    <li>المساحة (متر مربع، هكتار، فدان...)</li>
+                                    <li>درجة الحرارة (سيلسيوس، فهرنهايت، كلفن)</li>
+                                    <li>الحجم (لتر، جالون، مليلتر...)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل ستضيفون محولات جديدة؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، نعمل باستمرار على إضافة محولات جديدة حسب احتياجات المستخدمين. يمكنك اقتراح محولات جديدة من خلال صفحة "اتصل بنا".
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                لماذا لا أجد وحدة معينة؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نركز على الوحدات الأكثر استخداماً لتبسيط التجربة. إذا كنت تحتاج وحدة معينة، اقترحها علينا وسننظر في إضافتها.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الخصوصية -->
+                    <div class="faq-section" style="margin-bottom: var(--spacing-2xl);">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">الخصوصية والبيانات</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل تحفظون بياناتي؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                لا نحفظ أي من القيم التي تدخلها أو النتائج. جميع العمليات تتم محلياً في متصفحك ولا ترسل لخوادمنا.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل تستخدمون ملفات تعريف الارتباط؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نستخدم ملفات تعريف ارتباط أساسية فقط لتحسين تجربة الاستخدام (مثل تذكر اللغة المفضلة). لا نستخدم ملفات تتبع أو إعلانات.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الدعم -->
+                    <div class="faq-section">
+                        <h2 style="margin-bottom: var(--spacing-lg); color: var(--primary-color);">الدعم والمساعدة</h2>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                كيف يمكنني التواصل معكم؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                يمكنك التواصل معنا عبر صفحة "اتصل بنا" أو إرسال بريد إلكتروني على support@nexluna.com. نرد عادة خلال 24 ساعة.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                كم وقت الرد على الاستفسارات؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نسعى للرد على جميع الاستفسارات خلال 24 ساعة من وقت الإرسال. في حالة الاستفسارات المعقدة قد نحتاج وقت أطول.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                هل يمكنني اقتراح تحسينات؟
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                نعم، نرحب بجميع الاقتراحات والملاحظات. آراؤكم تساعدنا في تحسين الخدمة باستمرار. استخدم صفحة "اتصل بنا" لإرسال اقتراحاتك.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- لم تجد إجابتك؟ -->
+                <div class="card" style="margin-top: var(--spacing-2xl); text-center; background: var(--bg-tertiary);">
+                    <div class="card-body">
+                        <h3 style="color: var(--primary-color); margin-bottom: var(--spacing-md);">لم تجد إجابة لسؤالك؟</h3>
+                        <p style="margin-bottom: var(--spacing-lg);">نحن هنا لمساعدتك! تواصل معنا وسنجيب على استفسارك في أقرب وقت ممكن.</p>
+                        <a href="/contact.html" class="btn btn-primary btn-lg">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="branding.logo">نِكسلونا</h4>
+                    <p data-i18n="footer.description">نِكسلونا هي أداة مجانية وشاملة لتحويل جميع أنواع وحدات القياس.</p>
+                </div>
+                <div class="footer-section">
+                    <h5 data-i18n="footer.converters">المحولات</h5>
+                    <a href="/length-converter.html" data-i18n="navigation.length">الطول</a>
+                    <a href="/weight-converter.html" data-i18n="navigation.weight">الوزن</a>
+                    <a href="/area-converter.html" data-i18n="navigation.area">المساحة</a>
+                    <a href="/temperature-converter.html" data-i18n="navigation.temperature">درجة الحرارة</a>
+                    <a href="/volume-converter.html" data-i18n="navigation.volume">الحجم</a>
+                </div>
+                <div class="footer-section">
+                    <h5 data-i18n="footer.support">الدعم</h5>
+                    <a href="/faq.html" data-i18n="footer.faq">الأسئلة الشائعة</a>
+                    <a href="/contact.html" data-i18n="navigation.contact">اتصل بنا</a>
+                    <a href="/privacy.html" data-i18n="footer.privacy">سياسة الخصوصية</a>
+                    <a href="/terms.html" data-i18n="footer.terms">شروط الاستخدام</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2024 نِكسلونا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/app.js"></script>
+    <script>
+        // وظائف الأسئلة الشائعة
+        document.addEventListener('DOMContentLoaded', function() {
+            // التعامل مع النقر على الأسئلة
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const isActive = faqItem.classList.contains('active');
+                    
+                    // إغلاق جميع الإجابات الأخرى
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-answer').classList.remove('active');
+                        item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+                    
+                    // فتح/إغلاق الإجابة الحالية
+                    if (!isActive) {
+                        faqItem.classList.add('active');
+                        answer.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+            
+            // البحث في الأسئلة الشائعة
+            const searchBox = document.getElementById('faqSearch');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm) || searchTerm === '') {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // إظهار رسالة إذا لم توجد نتائج
+                const visibleItems = Array.from(faqItems).filter(item => item.style.display !== 'none');
+                const container = document.getElementById('faqContainer');
+                
+                let noResultsMsg = document.getElementById('noResults');
+                if (visibleItems.length === 0 && searchTerm !== '') {
+                    if (!noResultsMsg) {
+                        noResultsMsg = document.createElement('div');
+                        noResultsMsg.id = 'noResults';
+                        noResultsMsg.className = 'card';
+                        noResultsMsg.style.textAlign = 'center';
+                        noResultsMsg.style.padding = 'var(--spacing-xl)';
+                        noResultsMsg.innerHTML = `
+                            <h3>لم نجد نتائج</h3>
+                            <p>جرب كلمات أخرى أو <a href="/contact.html">تواصل معنا</a> مباشرة</p>
+                        `;
+                        container.appendChild(noResultsMsg);
+                    }
+                } else if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+# Nexluna Unit Converter - Robots.txt
+# Visit https://nexluna.com for free unit conversion tools
+
+User-agent: *
+Allow: /
+
+# Main pages
+Allow: /index.html
+Allow: /length-converter.html
+Allow: /weight-converter.html
+Allow: /area-converter.html
+Allow: /temperature-converter.html
+Allow: /volume-converter.html
+
+# Articles and blog
+Allow: /blog/
+Allow: /articles/
+Allow: /guides/
+
+# English version
+Allow: /en/
+
+# CSS, JavaScript, and assets
+Allow: /src/assets/css/
+Allow: /src/assets/js/
+Allow: /src/assets/images/
+Allow: /src/assets/fonts/
+
+# Block development files
+Disallow: /src/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /test/
+Disallow: /tests/
+Disallow: /*.log
+Disallow: /*.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backup/
+
+# Block duplicate content
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*&utm_
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Site map locations
+Sitemap: https://nexluna.com/sitemap.xml
+Sitemap: https://nexluna.com/blog-sitemap.xml
+Sitemap: https://nexluna.com/articles-sitemap.xml
+
+# Crawl delay (optional - adjust based on server capacity)
+Crawl-delay: 1
